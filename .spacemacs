@@ -140,6 +140,8 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (define-key evil-normal-state-map (kbd "H") 'evil-beginning-of-line)
+  (define-key evil-normal-state-map (kbd "L") 'evil-end-of-line)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
