@@ -247,7 +247,16 @@ layers configuration. You are free to put any user code."
 
   ;; Set escape keybinding to "jk"
   (setq-default evil-escape-key-sequence "jk")
+  ;; stronger H and L
+  (define-key evil-normal-state-map (kbd "H") 'evil-beginning-of-line)
+  (define-key evil-normal-state-map (kbd "L") 'evil-end-of-line)
+  ;; evil number
+  (define-key evil-normal-state-map (kbd "C-a") 'evil-numbers/inc-at-pt)
+  (define-key evil-visual-state-map (kbd "C-a") 'evil-numbers/inc-at-pt)
+  (define-key evil-normal-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
+  (define-key evil-visual-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
   )
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
