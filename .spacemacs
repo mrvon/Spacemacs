@@ -28,6 +28,7 @@ values."
      emacs-lisp
      ;; git
      markdown
+     lua
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -245,6 +246,9 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
 
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 4)
+
   ;; Set escape keybinding to "jk"
   (setq-default evil-escape-key-sequence "jk")
   ;; stronger H and L
@@ -258,6 +262,8 @@ layers configuration. You are free to put any user code."
   ;; evil vim-surround
   (evil-define-key 'visual evil-surround-mode-map "s" 'evil-substitute)
   (evil-define-key 'visual evil-surround-mode-map "S" 'evil-surround-region)
+  ;; powerline-style
+  (setq powerline-default-separator 'arrow)
   )
 
 
