@@ -108,7 +108,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Monaco"
-                               :size 13
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -246,8 +246,10 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
 
-  (setq-default indent-tabs-mode nil)
   (setq-default tab-width 4)
+  (setq-default indent-tabs-mode nil)
+  (setq-default c-basic-offset 4)
+  (setq-default lua-indent-level 4)
 
   ;; Set escape keybinding to "jk"
   (setq-default evil-escape-key-sequence "jk")
